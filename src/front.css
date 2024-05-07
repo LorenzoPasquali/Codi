@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Verdana:wght@400;700&display=swap');
+
+body {
+    background: -webkit-linear-gradient(top, #292929 40%, #2980f2);
+    background: -moz-linear-gradient(top, #292929 40%, #2980f2);
+    
+    background: -o-linear-gradient(top, #292929 50%, #2980f2);
+    background: linear-gradient(to bottom, #292929 1%, #010914);
+    
+    
+    font-family: Verdana, sans-serif;
+    color:rgb(255, 255, 255);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Definir altura mínima da tela */
+    box-sizing: border-box;
+    overflow-y: auto; /* Adicionar barra de rolagem vertical */
+    padding-bottom: 10px; /* Adicionar espaço para o rodapé */
+}
+
+.logo {
+    width: 200px; /* Ajuste conforme necessário */
+    height: px; /* Ajuste conforme necessário */
+    border-radius: 0%; /* Para tornar a imagem do logo arredondada */
+    margin-bottom: 1px; /* Margem inferior para separar do título */
+}
+
+.titulo, .subtitulo {
+    font-weight: 700; /* Peso da fonte para o título */
+    font-size: 21px; /* Tamanho da fonte para o título */
+    color:rgba(245, 245, 245, 0.89) ;
+    margin-bottom: 1px; /* Margem inferior para separar do subtítulo */
+} 
+
+.subtitulo {
+    font-weight: 500; /* Peso da fonte para o subtítulo */
+    font-size: 17px; /* Tamanho da fonte para o subtítulo */
+    color: rgba(245, 245, 245, 0.747);
+    margin-bottom: 30px; /* Margem inferior para separar dos botões */
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    height: 26px;
+    width: 580px; /* Largura fixa para todos os botões */
+    background-color: #007bff8a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 17px;
+    margin-top: 12px; /* Margem superior aos botões */
+    font-weight: 400; /* Peso da fonte para os botões */
+    font-size: 17px; /* Tamanho da fonte para os botões */
+    transition: transform 0.3s; /* Transição suave de transformação */
+}
+
+.botao:hover {
+    transform: scale(1.1); /* Aumentar a escala dos botões ao passar o mouse */
+}
+
+.numero:hover {
+    transform: scale(1.1); /* Aumentar a escala dos botões ao passar o mouse */
+}
+
+.botao img {
+    height: 20px; /* Altura automática para manter a proporção */
+}
+
+.whatsapp img,
+.instagram img,
+.linkedin img {
+    width: 25px; /* Tamanho do ícone */
+    height: 25px; /* Altura automática para manter a proporção */
+}
+
+.botao span {
+    flex-grow: 1; /* Permite que o texto ocupe todo o espaço disponível */
+    text-align: center; /* Centraliza o texto */
+}
+
+.numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 20px;
+    height: 26px;
+    width: 580px; /* Largura fixa para todos os botões */
+    background-color: #007bff8a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px; /* Margem superior aos botões */
+    font-weight: 100; /* Peso da fonte para os botões */
+    font-size: 18px; /* Tamanho da fonte para os botões */
+    transition: transform 0.3s; /* Transição suave de transformação */
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* Define a largura para ocupar toda a largura da tela */
+    background-color: #007bff8a; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remover sublinhado padrão */
+    border-radius: 5px; /* Arredondamento das bordas */
+    margin-top: 20px; /* Margem superior */
+    z-index: 999; /* Define a ordem de empilhamento para que o botão "numero" fique acima de outros elementos */
+}
+
+.numero img {
+    height: 20px; /* Altura do ícone */
+    width: auto; /* Largura automática para manter a proporção */
+    margin-right: 10px; /* Margem à direita do ícone */
+}
+    /* Adicione uma regra de mídia para telas menores que 758 pixels */
+    @media only screen and (max-width: 758px) {
+        .botao {
+            height: 20px;
+            width: 230px; /* Defina uma largura menor para os botões em telas menores */
+            font-size: 12px; /* Defina um tamanho de fonte menor para os botões em telas menores */
+            z-index: 1; /* Define um z-index menor para os botões */
+            margin-bottom: 0px; /* Adicione um espaçamento entre os botões */
+        }
+        
+        .numero {
+            font-size: 13px;
+            margin-top: 10px; /* Aumente o espaçamento entre o número e os botões */
+        }
+    
+        .subtitulo {
+            margin-bottom: 20px;
+            font-size: 13px;
+            
+        }
+
+        .titulo {
+            font-size: 18px;
+            
+        }
+    }

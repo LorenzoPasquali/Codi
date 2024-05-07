@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso área do Cliente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Verdana:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/favicon.png">
+    <style type="text/css">
+        body {
+            background: -webkit-linear-gradient(top, #292929 40%, #2980f2);
+            background: -moz-linear-gradient(top, #292929 40%, #2980f2);
+            background: -ms-linear-gradient(top, #292929 40%, #2980f2);
+            background: -o-linear-gradient(top, #292929 50%, #2980f2);
+            background: linear-gradient(to bottom, #292929 1%, #010914);
+            font-family: Verdana, sans-serif;
+            color: whitesmoke;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Dividindo a tela em duas colunas */
+            align-items: center;
+            justify-items: center;
+            gap: 20px; /* Espaçamento entre as colunas */
+        }
+
+        .logo {
+            width: 200px;
+            height: auto; /* Ajuste para manter a proporção */
+            border-radius: 0%;
+            margin-bottom: 20px;
+        }
+
+        .titulo {
+            font-weight: 600;
+            font-size: 22px;
+            color: rgba(245, 245, 245, 0.89);
+            margin-bottom: 5px;
+        } 
+
+        .subtitulo {
+            font-weight: 500;
+            font-size: 18px;
+            color: rgba(245, 245, 245, 0.747);
+            margin-bottom: 30px;
+            margin: 25px;
+            word-wrap: break-word;
+        }
+        .video-container {
+            width: 100%;
+            height: auto;
+            max-width: 950px;
+            margin-top: 40px;
+            margin-right: 35px;
+        }
+
+        .botao {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            height: 20px;
+            width: 100%;
+            max-width: 200px;
+            background-color: #007bff8a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 15px;
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 16px;
+            transition: transform 0.3s;
+            margin-bottom: 1px;
+            grid-column: 1 / span 2; /* Ocupando duas colunas */
+        }
+
+        .numero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3px 20px;
+            height: 26px;
+            width: 580px; /* Largura fixa para todos os botões */
+            background-color: #007bff8a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px; /* Margem superior aos botões */
+            font-weight: 100; /* Peso da fonte para os botões */
+            font-size: 18px; /* Tamanho da fonte para os botões */
+            transition: transform 0.3s; /* Transição suave de transformação */
+            position: fixed;
+            bottom: 0;
+            width: 100%; /* Define a largura para ocupar toda a largura da tela */
+            background-color: #007bff8a; /* Cor de fundo */
+            color: #fff; /* Cor do texto */
+            text-decoration: none; /* Remover sublinhado padrão */
+            border-radius: 5px; /* Arredondamento das bordas */
+            margin-top: 20px; /* Margem superior */
+            z-index: 999; /* Define a ordem de empilhamento para que o botão "numero" fique acima de outros elementos */
+        }
+
+        .numero img {
+            height: 20px; /* Altura do ícone */
+            width: auto; /* Largura automática para manter a proporção */
+            margin-right: 10px; /* Margem à direita do ícone */
+        }
+
+        .botao:hover, .numero:hover {
+            transform: scale(1.1); /* Aumentar a escala dos botões ao passar o mouse */
+        }
+
+        @media only screen and (max-width: 758px) {
+    body {
+        grid-template-columns: 1fr; /* Em telas menores, uma única coluna */
+        align-items: center; /* Centralizar na direção vertical */
+        justify-items: center; /* Centralizar na direção horizontal */
+    }
+
+    .logo {
+        max-width: 150px;
+        margin-top: 40px;
+    }
+
+    .titulo {
+        font-size: 18px;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+        margin-bottom: 20px; /* Aumentando a margem inferior */
+    }
+
+    .botao {
+        font-size: 14px;
+        margin-top: -20px;
+        max-width: 100px;
+        max-height: 15px;
+    }
+
+    .numero {
+        display: none;
+    }
+
+    .video-container {
+        margin-top: -70px; /* Espaçamento entre o conteúdo superior e o vídeo */
+        margin-right: 0px;
+        grid-column: 1 / span 2; /* Ocupando duas colunas */
+    }
+
+    video {
+        max-width: 300px; /* Definindo a largura máxima do vídeo */
+        max-height: 250px; /* Definindo a altura máxima do vídeo */
+    }
+}
+
+
+   
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="Images/logo.png" alt="Logo da empresa" class="logo">
+        <h1 class="titulo">Acesso área do cliente</h1>
+        <p class="subtitulo">Em seu sistema, no canto inferior direito da tela conseguirá acessar a área do cliente, que levará a uma tela com diversas opções como: Contato, Eventos, Documentação e também para abrir um chamado direto a Equipe de Suporte, como mostra o vídeo relacionado.</p>
+    </div>
+    <div class="video-container">
+        <video controls width="750" height="450">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <a href="ClienteCodi.html" class="botao doc">Voltar</a>
+    <div class="numero">
+        <a href="tel:5430281005" style="color: inherit; text-decoration: none;">(54)3029-9891</a>
+        <img src="Images/telefone.png" alt="telefone">
+    </div>
+</body>
+</html>
